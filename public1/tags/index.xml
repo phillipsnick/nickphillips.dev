@@ -4,12 +4,10 @@
     <title>Tags on nickphillips.dev</title>
     <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on nickphillips.dev</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>hello@nickphillips.dev (Nick Phillips)</managingEditor>
     <webMaster>hello@nickphillips.dev (Nick Phillips)</webMaster>
-    <copyright>© 2026 Nick Phillips</copyright>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    
   </channel>
 </rss>
