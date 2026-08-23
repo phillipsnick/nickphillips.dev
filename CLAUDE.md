@@ -23,6 +23,10 @@ hugo new content/posts/my-post-title.md
 
 Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/gh-pages.yml`), which builds with `hugo --minify` and deploys the `public/` directory to the `gh-pages` branch. The `static/CNAME` file ensures the custom domain is preserved on every deploy.
 
+Pull requests against `main` run `.github/workflows/build-check.yml`, which builds but does not deploy.
+
+Both workflows pin `hugo-version` explicitly (currently `0.165.0`) rather than using `latest`. The Blowfish theme declares a supported Hugo range in `themes/blowfish/config.toml` (`[module.hugoVersion]` min/max); building outside it emits an incompatibility warning. When bumping the theme submodule, check that range and update the pin in both workflows to match.
+
 ## Configuration Layout
 
 All site config lives under `config/_default/`:
@@ -33,7 +37,7 @@ All site config lives under `config/_default/`:
 - `menus.en.toml` — nav menu entries (currently all commented out)
 - `markup.toml` — Goldmark renderer settings required by the theme (unsafe HTML, passthrough LaTeX delimiters)
 
-The root `hugo.toml` only sets `baseURL`, `languageCode`, and `title`; all real config is in `config/_default/`.
+The root `hugo.toml` only sets `baseURL`; all real config is in `config/_default/`. Site title and locale come from `languages.en.toml` (`title`, `locale = "en-gb"`), which overrides anything set at root.
 
 ## Theme Customisation
 

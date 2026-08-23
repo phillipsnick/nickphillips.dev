@@ -1,0 +1,16 @@
+# Hugo build output (deployed to the gh-pages branch by CI, never committed here)
+/public/
+/resources/_gen/
+.hugo_build.lock
+hugo_stats.json
+
+# Theme tooling (Blowfish ships npm scripts for asset builds)
+node_modules/
+
+# Local environment
+.env
+.env.local
+*.log
+
+# macOS
+.DS_Store
