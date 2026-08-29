@@ -2,17 +2,19 @@
 date = '2026-01-30'
 draft = false
 title = 'Welcome'
-categories = []
-tags = []
+description = 'An introduction to the blog and what I will be writing about.'
+tags = ['meta']
 +++
 
-Hi, I'm Nick — I've been working in tech for over 20 years and after being made redundant at the end of 2025 I finally figured it was time to start my tech blog which I've been planning since I started in this career!
+Hi, I'm Nick. I've worked in tech for over 20 years, and after being made redundant at the end of 2025, I finally started the blog I've been planning since the beginning of my career.
 
-Will be a tech focus on the following:
+The blog will focus on:
 
-- **Homelab** — self-hosting, servers, networking, and the money pit that this hobby is
-- **Home Automation** — how HA and Loxone is utilised to seamlessly spend my life debugging software bugs in my house
-- **AI** — experimenting with self hosting LLMs and beyond
-- **Irrigation** — building and automating a garden watering setup
-- **Home Cinema** — getting the most out of a home theatre without to avoid people on their phones in the cinema
-- **3D Printing** - hopefully not creating a ton of plastic waste
+- **Homelab** — self-hosting, servers, networking, and my favourite money pit
+- **Home Automation** — using Home Assistant and Loxone to seamlessly spend my life debugging my house
+- **AI** — self-hosting LLMs on local hardware
+- **Garden Irrigation** — building and automating a garden watering setup
+- **Home Cinema** — budget-friendly home cinema
+- **3D Printing** — hopefully without creating a ton of plastic waste
+
+If any of that sounds interesting, subscribe via [RSS](/index.xml) or find me on [GitHub](https://github.com/phillipsnick).
