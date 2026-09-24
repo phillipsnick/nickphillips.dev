@@ -1,0 +1,33 @@
+/* Content width & centring
+ *
+ * Blowfish caps the reading column at Tailwind's `max-w-prose` (65ch) but
+ * sits it inside a `max-w-7xl` body with `lg:px-32` padding. The body is
+ * centred, the column is not — so on a wide screen the text is both narrower
+ * than it needs to be and pushed to the left of the page.
+ *
+ * Widen the column, then shrink the body to hug it so it centres on screen.
+ * Change --bf-content-width alone to adjust; the body follows it.
+ *
+ * custom.css is concatenated last and is unlayered, so these rules beat the
+ * theme's utilities without !important.
+ */
+
+:root {
+  --bf-content-width: 48rem; /* theme default is 65ch, roughly 38rem */
+}
+
+.max-w-prose {
+  max-width: var(--bf-content-width);
+}
+
+@media (min-width: 1024px) {
+  body {
+    max-width: calc(var(--bf-content-width) + 6rem);
+    padding-inline: 3rem;
+  }
+
+  /* Pages with a sidebar table of contents need room for it alongside */
+  body:has(.toc) {
+    max-width: calc(var(--bf-content-width) + 24rem);
+  }
+}
