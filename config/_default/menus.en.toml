@@ -67,3 +67,15 @@
 #   name = "Categories"
 #   pageRef = "categories"
 #   weight = 20
+
+# -- Active menu entries --
+
+[[main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "About"
+  pageRef = "about"
+  weight = 20
