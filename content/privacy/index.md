@@ -1,7 +1,7 @@
 +++
 date = '2026-09-24'
 draft = false
-title = 'Privacy'
+title = 'Privacy Policy'
 description = 'What this site collects, what it does not, and who else is involved.'
 layout = 'simple'
 +++
