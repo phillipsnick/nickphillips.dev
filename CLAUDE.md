@@ -25,7 +25,7 @@ Pushing to `main` triggers the GitHub Actions workflow (`.github/workflows/gh-pa
 
 Pull requests against `main` run `.github/workflows/build-check.yml`, which builds but does not deploy.
 
-Both workflows pin `hugo-version` explicitly (currently `0.165.0`) rather than using `latest`. The Blowfish theme declares a supported Hugo range in `themes/blowfish/config.toml` (`[module.hugoVersion]` min/max); building outside it emits an incompatibility warning. When bumping the theme submodule, check that range and update the pin in both workflows to match.
+Both workflows pin `hugo-version` explicitly (currently `0.166.0`) rather than using `latest`. The Blowfish theme declares a supported Hugo range in `themes/blowfish/config.toml` (`[module.hugoVersion]` min/max); building outside it emits an incompatibility warning. When bumping the theme submodule, check that range and update the pin in both workflows to match.
 
 ## Configuration Layout
 
