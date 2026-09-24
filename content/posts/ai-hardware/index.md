@@ -35,11 +35,11 @@ A couple of hours later, with calipers and Fusion 360, I had a 3D-printed PETG s
    alt="3D Printed fan shroud" 
 >}}
 
-This model is available on [MakerWorld](#) *TODO: publish/link*
+This model is available on [MakerWorld](https://makerworld.com/en/models/3352449-generic-rtx-3090-server-gpu-blower-attachment#profileId-3810422)
 
 ## Fan Control
 
-Upon disassembling the GPU I noticed some smaller 4-pin headers on the PCB which look similar to previous consumer GPU fan headers I'm familiar with.
+Upon disassembling the GPU, I noticed some smaller 4-pin headers on the PCB which look similar to previous consumer GPU fan headers I'm familiar with.
 
 After experimenting with a micro to standard 4-pin PWM adapter, and trying fan control through both `nvidia-smi` and `nvidia-settings`, there was no PWM output on the header, and no tach reading from a questionably wired test setup.
 
