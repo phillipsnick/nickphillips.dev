@@ -32,6 +32,45 @@ hugo new content/posts/my-post-title.md
 
 Set `draft = false` in the front matter when ready to publish.
 
+## Image Metadata
+
+Photos straight off a phone or camera carry EXIF metadata: GPS coordinates,
+camera serial number, owner name, and capture timestamps. Hugo copies page
+bundle originals into the built site **byte for byte** — the full resolution
+file is published exactly as it sits in the repo, alongside the resized
+variants. Nothing in the build strips metadata for you, so it has to be removed
+at source before committing.
+
+Strip it with [ExifTool](https://exiftool.org) (`brew install exiftool`):
+
+```bash
+# Check what an image is carrying
+exiftool -a -G1 -s path/to/image.jpg
+
+# Strip a single image
+exiftool -all= -tagsfromfile @ -Orientation -ICC_Profile -overwrite_original path/to/image.jpg
+
+# Strip everything under content/ recursively
+exiftool -all= -tagsfromfile @ -Orientation -ICC_Profile -overwrite_original \
+  -r -ext jpg -ext jpeg -ext png content/
+```
+
+The `-tagsfromfile @ -Orientation -ICC_Profile` part matters. A bare
+`exiftool -all=` also removes the orientation flag and the colour profile, which
+makes phone photos display rotated and can visibly shift colours. Those two tags
+carry nothing sensitive, so they are worth keeping.
+
+`-overwrite_original` edits in place. Drop it if you would rather ExifTool left
+`.jpg_original` backups behind.
+
+To confirm a directory is clean — this prints nothing when there is nothing
+left to find:
+
+```bash
+exiftool -r -if '$GPSLatitude or $SerialNumber or $OwnerName' \
+  -filename -GPSPosition -SerialNumber -OwnerName content/
+```
+
 ## Deployment
 
 Pushing to `main` automatically triggers a GitHub Actions workflow that:
