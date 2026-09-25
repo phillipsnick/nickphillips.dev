@@ -8,9 +8,11 @@ layout = 'simple'
 
 Hi, I'm Nick.
 
-I've worked in tech for over 20 years, and most of what I write about lives at
-the intersection of "this should be simple" and "I've now spent a fortnight on
-it":
+I've worked in tech for over 20 years, most recently as a principal engineer,
+mainly across PHP, Python and NodeJS.
+
+Most of what I write about lives at the intersection of "this should be simple"
+and "I've now spent a fortnight on it":
 
 - **Homelab** — self-hosting, servers, networking, and my favourite money pit
 - **Home Automation** — Home Assistant and Loxone, seamlessly spending my life debugging my house
@@ -28,11 +30,14 @@ hardware I didn't need to buy.
 I'm happy to hear from anyone who's building something similar, or who's spotted
 that I've got something wrong.
 
+I'm also open to remote principal or staff engineering roles in the UK, and
+LinkedIn is the best place to start that conversation.
+
 - Email — [hello@nickphillips.dev](mailto:hello@nickphillips.dev)
 - GitHub — [@phillipsnick](https://github.com/phillipsnick)
-- LinkedIn — [nick-phillips](https://www.linkedin.com/in/nick-phillips-b5710b22/)
+- LinkedIn — [Nick Phillips](https://www.linkedin.com/in/phillipsnick/)
 
-New posts go out via [RSS](/index.xml).
+New posts go out via [RSS](/posts/index.xml).
 
 ## Website
 
