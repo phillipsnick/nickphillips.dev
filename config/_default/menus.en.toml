@@ -68,7 +68,10 @@
 #   pageRef = "categories"
 #   weight = 20
 
-# -- Active menu entries --
+[[footer]]
+  name = "Privacy"
+  pageRef = "privacy"
+  weight = 10
 
 [[main]]
   name = "Blog"
